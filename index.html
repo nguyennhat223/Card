@@ -7,139 +7,176 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(135deg, #1b2255, #0e0c30);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #1b2255, #0e0c30);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-.invite-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 40px 30px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
-  animation: fadeIn 2s ease forwards;
-  backdrop-filter: blur(10px);
-}
+    .invite-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+      animation: fadeIn 2s ease forwards;
+      backdrop-filter: blur(10px);
+      z-index: 1;
+    }
 
-.title {
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  background: linear-gradient(45deg, #ff6ec4, #7873f5, #f9d423);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
-}
+    .title {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5, #f9d423);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
 
-.subtitle {
-  font-size: 1.1rem;
-  color: #ccc;
-  margin-bottom: 30px;
-}
+    .subtitle {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
 
-.graduate-info {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
+    .graduate-info {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
 
-.graduate-info .name {
-  font-weight: 700;
-  font-size: 2rem;
-  color: #c8b6ff;
-  margin-bottom: 8px;
-}
+    .graduate-info .name {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #c8b6ff;
+      margin-bottom: 8px;
+    }
 
-.graduate-info .degree,
-.graduate-info .university {
-  color: #aaa;
-}
+    .graduate-info .degree,
+    .graduate-info .university {
+      color: #aaa;
+    }
 
-.details {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
+    .details {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
 
-.detail-item {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 15px 20px;
-  margin: 10px;
-  flex: 1 1 30%;
-  min-width: 140px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    .detail-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin: 10px;
+      flex: 1 1 30%;
+      min-width: 140px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-.detail-item i {
-  font-size: 1.8rem;
-  color: #ff6ec4;
-  margin-bottom: 10px;
-}
+    .detail-item i {
+      font-size: 1.8rem;
+      color: #ff6ec4;
+      margin-bottom: 10px;
+    }
 
-.detail-item .label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #fff;
-}
+    .detail-item .label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #fff;
+    }
 
-.detail-item .value {
-  color: #eee;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
+    .detail-item .value {
+      color: #eee;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
 
-.detail-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 110, 196, 0.4);
-}
+    .detail-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 110, 196, 0.4);
+    }
 
-.quote {
-  font-style: italic;
-  font-size: 0.95rem;
-  color: #ddd;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
+    .quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #ddd;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
 
-.footer-text {
-  color: #c8b6ff;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
+    .footer-text {
+      color: #c8b6ff;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
+    /* Bong bóng bay bay */
+    .floating-bubbles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: floatUp 10s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.5);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Bong bóng bay bay -->
+  <div class="floating-bubbles" id="bubbles"></div>
+
   <div class="invite-card">
     <h1 class="title">Thiệp Mời Tốt Nghiệp</h1>
     <p class="subtitle">Gia đình Trần trân trọng kính mời</p>
@@ -176,5 +213,24 @@ body {
   </div>
 
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <script>
+    const container = document.getElementById('bubbles');
+    const colors = ['rgba(255,255,255,0.2)', 'rgba(255,255,255,0.1)', 'rgba(255,255,255,0.15)'];
+
+    function createBubble() {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      bubble.style.left = Math.random() * 100 + 'vw';
+      const size = 10 + Math.random() * 20;
+      bubble.style.width = bubble.style.height = size + 'px';
+      bubble.style.animationDuration = (6 + Math.random() * 4) + 's';
+      bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
+      container.appendChild(bubble);
+
+      setTimeout(() => container.removeChild(bubble), 10000);
+    }
+
+    setInterval(createBubble, 500);
+  </script>
 </body>
 </html>
