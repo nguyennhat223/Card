@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp Mời Tốt Nghiệp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #1b2255, #0e0c30);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.invite-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 2s ease forwards;
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #f9d423);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.graduate-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.graduate-info .name {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #c8b6ff;
+  margin-bottom: 8px;
+}
+
+.graduate-info .degree,
+.graduate-info .university {
+  color: #aaa;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 10px;
+  flex: 1 1 30%;
+  min-width: 140px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.detail-item i {
+  font-size: 1.8rem;
+  color: #ff6ec4;
+  margin-bottom: 10px;
+}
+
+.detail-item .label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.detail-item .value {
+  color: #eee;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.detail-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 110, 196, 0.4);
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #ddd;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.footer-text {
+  color: #c8b6ff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="invite-card">
+    <h1 class="title">Thiệp Mời Tốt Nghiệp</h1>
+    <p class="subtitle">Gia đình Trần trân trọng kính mời</p>
+
+    <div class="graduate-info">
+      <h2 class="name">Nguyễn Tấn Nhật</h2>
+      <p class="degree">Cử nhân Công nghệ Thông tin</p>
+      <p class="university">Đại học Khoa Học - Đại Học Huế</p>
+    </div>
+
+    <div class="details">
+      <div class="detail-item">
+        <i class="fas fa-calendar-alt"></i>
+        <span class="label">Ngày</span>
+        <span class="value">5 tháng 7, 2025</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock"></i>
+        <span class="label">Thời gian</span>
+        <span class="value">09:00</span>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="label">Địa điểm</span>
+        <span class="value">Hội trường số 1<br>Điện Biên Phủ, Huế</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      "Bốn năm miệt mài đèn sách đã đến ngày hái quả ngọt. Sự có mặt của bạn là niềm vinh hạnh và là lời động viên lớn nhất đối với mình trong ngày trọng đại này."
+    </div>
+
+    <p class="footer-text">Sự hiện diện của bạn là niềm vinh hạnh lớn nhất!</p>
+  </div>
+
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</body>
+</html>
